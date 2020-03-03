@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2F620AC9-9B8B-4C36-AA34-268985B0D759}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SapFramework</RootNamespace>
+    <AssemblyName>SapFramework</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseDados\BD.cs" />
+    <Compile Include="BaseDados\Campos.cs" />
+    <Compile Include="BaseDados\Context\IRepositoryBaseNoObject.cs" />
+    <Compile Include="BaseDados\Context\RepositoryBaseNoObject.cs" />
+    <Compile Include="BaseDados\DadosBaseInstalada.cs" />
+    <Compile Include="BaseDados\enumeradores\Tipos.cs" />
+    <Compile Include="BaseDados\ICampos.cs" />
+    <Compile Include="BaseDados\ITabelas.cs" />
+    <Compile Include="BaseDados\IUdo.cs" />
+    <Compile Include="BaseDados\IValoresValidos.cs" />
+    <Compile Include="BaseDados\RelationalReader.cs" />
+    <Compile Include="BaseDados\Sistema\CUFD.cs" />
+    <Compile Include="BaseDados\Sistema\OUTB.cs" />
+    <Compile Include="BaseDados\Sistema\UFD1.cs" />
+    <Compile Include="BaseDados\Tabelas.cs" />
+    <Compile Include="BaseDados\Tipagem.cs" />
+    <Compile Include="BaseDados\Udo.cs" />
+    <Compile Include="BaseDados\ValoresValidos.cs" />
+    <Compile Include="Connections\B1AppDomain.cs" />
+    <Compile Include="Connections\B1Exception.cs" />
+    <Compile Include="Connections\UI\ConnectUI.cs" />
+    <Compile Include="dotNET\Atributos\EventsAttribute.cs" />
+    <Compile Include="dotNET\Atributos\FieldsAttribute.cs" />
+    <Compile Include="dotNET\Atributos\FormAttribute.cs" />
+    <Compile Include="dotNET\Atributos\MenuAttribute.cs" />
+    <Compile Include="dotNET\Atributos\PluginsAttribute.cs" />
+    <Compile Include="dotNET\Atributos\TablesAttribute.cs" />
+    <Compile Include="dotNET\Atributos\TablesChildAttribute.cs" />
+    <Compile Include="dotNET\Atributos\UdoAttribute.cs" />
+    <Compile Include="dotNET\Atributos\UdoChildAttribute.cs" />
+    <Compile Include="dotNET\Atributos\ValidValuesAttribute.cs" />
+    <Compile Include="dotNET\ByteStringConverter.cs" />
+    <Compile Include="dotNET\String.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="Models\Plugins.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SAP\DI\Utils\UserFieldsMD.cs" />
+    <Compile Include="SAP\DI\Utils\UtilsObjects.cs" />
+    <Compile Include="SAP\Events\Events.cs" />
+    <Compile Include="SAP\UI\FormBase.cs" />
+    <Compile Include="SAP\UI\Forms\FileDialog.cs" />
+    <Compile Include="SAP\UI\Forms\FolderDialog.cs" />
+    <Compile Include="SAP\UI\Forms\WindowWrapper.cs" />
+    <Compile Include="SAP\UI\MenuBase.cs" />
+    <Compile Include="SAP\UI\TableBase.cs" />
+    <Compile Include="SAP\UI\Utils\ChooseFromList.cs" />
+    <Compile Include="SAP\UI\Utils\ComboBox.cs" />
+    <Compile Include="SAP\UI\Forms\FormsXml.cs" />
+    <Compile Include="SAP\UI\Utils\InternalUtils.cs" />
+    <Compile Include="SAP\UI\Utils\Menu.cs" />
+    <Compile Include="Settings\ConfigApplication.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>ConfigApplication.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Connections\DI\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Settings\ConfigApplication.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>ConfigApplication.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="SAPbobsCOM">
+      <Guid>{FC8030BE-F5D2-4B8E-8F92-44228FE30090}</Guid>
+      <VersionMajor>9</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="SAPbouiCOM">
+      <Guid>{6048236A-956D-498D-A6F1-9C81C13AB6E8}</Guid>
+      <VersionMajor>9</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

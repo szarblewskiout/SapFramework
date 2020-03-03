@@ -1,0 +1,30 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SapFramework.Settings" GeneratedClassName="ConfigApplication">
+  <Profiles />
+  <Settings>
+    <Setting Name="SAPApplication" Type="System.String" Scope="User">
+      <Value Profile="(Default)">SAPApplication</Value>
+    </Setting>
+    <Setting Name="SAPCompany" Type="System.String" Scope="User">
+      <Value Profile="(Default)">SAPCompany</Value>
+    </Setting>
+    <Setting Name="LogPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">log</Value>
+    </Setting>
+    <Setting Name="LogName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">AddOnLog</Value>
+    </Setting>
+    <Setting Name="SAPConnectionString" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ConnString</Value>
+    </Setting>
+    <Setting Name="SAPConnectionControlInterval" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">300000</Value>
+    </Setting>
+    <Setting Name="CreateReports" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="LastSortedCol" Type="System.String" Scope="User">
+      <Value Profile="(Default)">LastSortedCol</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
